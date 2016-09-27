@@ -1,0 +1,2 @@
+md dist
+npm init
