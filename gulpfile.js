@@ -10,7 +10,7 @@ var cssnano = require('gulp-cssnano');
 
 var paths = {
 	baseDir: './app',
-	scss_files: './app/assets/src/scss/**/*.scss',
+	scss_files: './app/scss/**/*.scss',
 	css_dist: './app/assets/css',
 	js_files: './app/assets/js/**/*.js',
 	dist: './dist'
