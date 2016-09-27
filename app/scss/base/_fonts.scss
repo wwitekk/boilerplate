@@ -1,0 +1,19 @@
+@function calculateEm($size) {
+  $emSize: $size / 16px;
+  @return $emSize * 1em;
+}
+
+@mixin setFont($fontName:"ProximaNova", $size:16px, $weight:300) {
+	@if $fontName == "ProximaNova" {
+  		font-family: "ProximaNova","Montserrat","Helvetica Neue", Helvetica, Arial, sans-serif; 
+  	} @else if $fontName == "Arial"{
+  		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+  	} @else if $fontName == "Tahoma" {
+  		font-family: Tahoma, Verdana, Geneva, sans-serif; 
+  	} @else if $fontName == "Verdana" {
+      font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    }
+	
+  font-size: calculateEm($size);
+	font-weight: $weight;
+}
