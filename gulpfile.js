@@ -53,6 +53,12 @@ gulp.task('useref', function(){
     .pipe(gulp.dest(paths.dist))
 });
 
+gulp.task('copy', function(){
+  var foldersToCopy = ['./app/assets/images/**/*', './app/assets/vendors/**/*'];
+  return gulp.src(foldersToCopy, {base:'./app/assets'})
+    .pipe(gulp.dest('./dist/assets/'));
+});
+
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
@@ -67,3 +73,5 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
   gulp.watch(paths.baseDir + '/*.html', browserSync.reload); 
   gulp.watch(paths.js_files, browserSync.reload); 
 });
+
+gulp.task('live',['useref', 'copy']);
