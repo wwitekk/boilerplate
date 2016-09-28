@@ -1,3 +1,4 @@
+rem install all gulp modules
 npm install --save-dev gulp ^
 gulp-sass ^
 gulp-sourcemaps ^
